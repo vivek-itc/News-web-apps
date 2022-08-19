@@ -1,6 +1,6 @@
 export const ROUTE = {
     HOME: {
         label: 'Home',
-        path: '/'
+        path: '/News-web-apps/'
     }
 }

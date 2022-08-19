@@ -10,11 +10,11 @@ import HomeScreen from "./../components/Dashboard"
 
 function RouteComponent() {
     return (
-        <Routes>
+        <Routes basename="/News-web-apps/">
             <Route
                 path={ROUTE.HOME.path}
                 element={<HomeScreen />}
-                ex
+                exact
             />
         </Routes>
     )
