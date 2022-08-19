@@ -10,7 +10,7 @@ import HomeScreen from "./../components/Dashboard"
 
 function RouteComponent() {
     return (
-        <Routes basename="/News-web-apps/">
+        <Routes basename="https://vivek-itc.github.io/News-web-apps/">
             <Route
                 path={ROUTE.HOME.path}
                 element={<HomeScreen />}
