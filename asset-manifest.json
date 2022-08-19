@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vivek-itc/News-web-apps/static/css/main.564f01a8.css",
-    "main.js": "/vivek-itc/News-web-apps/static/js/main.dc8af9eb.js",
+    "main.js": "/vivek-itc/News-web-apps/static/js/main.2865b1e7.js",
     "static/js/787.66a4299e.chunk.js": "/vivek-itc/News-web-apps/static/js/787.66a4299e.chunk.js",
     "index.html": "/vivek-itc/News-web-apps/index.html",
     "main.564f01a8.css.map": "/vivek-itc/News-web-apps/static/css/main.564f01a8.css.map",
-    "main.dc8af9eb.js.map": "/vivek-itc/News-web-apps/static/js/main.dc8af9eb.js.map",
+    "main.2865b1e7.js.map": "/vivek-itc/News-web-apps/static/js/main.2865b1e7.js.map",
     "787.66a4299e.chunk.js.map": "/vivek-itc/News-web-apps/static/js/787.66a4299e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.564f01a8.css",
-    "static/js/main.dc8af9eb.js"
+    "static/js/main.2865b1e7.js"
   ]
 }
