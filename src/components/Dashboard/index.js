@@ -8,7 +8,7 @@ export default function Dashboard() {
     return (
         <Box component="main" sx={{ p: 5 }}>
             <h1>Welcome to news app</h1>
-            <YoutubeEmbed embedId="rokGy0huYEA" />
+            <YoutubeEmbed embedId="9F8GdtlKGnI" />
         </Box>
     )
 }
