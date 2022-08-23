@@ -5,38 +5,25 @@ import CardList from "./../CardList/index";
 import {
     Grid
 } from '@mui/material'
-import { createTheme } from '@mui/material/styles';
+
+const list = ["LATEST JOBS", "LATEST RESULTS", "ADMIT CARD", "ANSWER KEY", "ADMISSION", "SYLLABUS" ]
 
 
 export default function Dashboard() {
 
     return (
-        <Box component="main" sx={{ paddingTop: 10, paddingX: 2 }}>
-            <Grid container spacing={1}>
-                <Grid item md={3}>
-                    <CardList />
-                </Grid>
-                <Grid item md={3}>
-                    <CardList />
-                </Grid>
-                <Grid item md={3}>
-                    <CardList />
-                </Grid>
-                <Grid item md={3}>
-                    <CardList />
-                </Grid>
+        <Box component="main" sx={{ paddingTop: 5, paddingX: 2 }}>
+            <Toolbar />
+            <Grid container spacing={1.2} sx={{ height: '100%' }}>
+                {list.map((item) => {
+                    return (
+                        <Grid item md={3}>
+                            <CardList title={item}/>
+                        </Grid>
+                    )
+                })}
             </Grid>
-            {/* <Toolbar /> */}
-            {/* <Grid container spacing={2}>
-                <Grid item xs={6}>
-                    <CardList />
-
-                </Grid>
-                <Grid item xs={6}>
-                    <CardList />
-
-                </Grid>
-            </Grid> */}
+            <Toolbar />
         </Box>
     )
 }
