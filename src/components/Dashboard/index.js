@@ -1,14 +1,42 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import YoutubeEmbed from "./../VideoFeed"
-import "./styles.css";
+import Toolbar from '@mui/material/Toolbar';
+import CardList from "./../CardList/index";
+import {
+    Grid
+} from '@mui/material'
+import { createTheme } from '@mui/material/styles';
 
 
 export default function Dashboard() {
+
     return (
-        <Box component="main" sx={{ p: 5 }}>
-            <h1>Welcome to news app</h1>
-            <YoutubeEmbed embedId="9F8GdtlKGnI" />
+        <Box component="main" sx={{ p: 10 }}>
+            <Grid container spacing={1}>
+                <Grid item md={3}>
+                    <CardList />
+                </Grid>
+                <Grid item md={3}>
+                    <CardList />
+                </Grid>
+                <Grid item md={3}>
+                    <CardList />
+                </Grid>
+                <Grid item md={3}>
+                    <CardList />
+                </Grid>
+            </Grid>
+            {/* <Toolbar /> */}
+            {/* <Grid container spacing={2}>
+                <Grid item xs={6}>
+                    <CardList />
+
+                </Grid>
+                <Grid item xs={6}>
+                    <CardList />
+
+                </Grid>
+            </Grid> */}
         </Box>
     )
 }

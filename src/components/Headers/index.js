@@ -12,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
+import { createTheme } from '@mui/material/styles';
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
@@ -23,6 +23,17 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
+const darkTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#fff',
+    },
+  },
+  typography: {
+    "fontFamily": `"Roboto", "Helvetica", "Arial", sans-serif`,
+    "color": '#000000'
+  }
+});
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -33,9 +44,9 @@ export default function DrawerAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-      NEWS DEMO WEB APP
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} theme={darkTheme}>
+      <Typography variant="subtitle1" sx={{ my: 2 }}>
+        NEWS DEMO WEB APP
       </Typography>
       <Divider />
       <List>
@@ -54,7 +65,7 @@ export default function DrawerAppBar(props: Props) {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav">
+      <AppBar component="nav" theme={darkTheme}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -66,7 +77,7 @@ export default function DrawerAppBar(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="subtitle1"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
@@ -74,7 +85,7 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: '#000000' }}>
                 {item}
               </Button>
             ))}
@@ -97,7 +108,7 @@ export default function DrawerAppBar(props: Props) {
         >
           {drawer}
         </Drawer>
-      </Box>      
+      </Box>
     </Box>
   );
 }
