@@ -11,7 +11,7 @@ import { createTheme } from '@mui/material/styles';
 export default function Dashboard() {
 
     return (
-        <Box component="main" sx={{ p: 10 }}>
+        <Box component="main" sx={{ paddingTop: 10, paddingX: 2 }}>
             <Grid container spacing={1}>
                 <Grid item md={3}>
                     <CardList />
