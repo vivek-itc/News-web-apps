@@ -5,20 +5,31 @@ import CardList from "./../CardList/index";
 import {
     Grid
 } from '@mui/material'
+import jobList from "./../data/LatestJob.json"
+import resultList from "./../data/LatestResult.json"
 
-const list = ["LATEST JOBS", "LATEST RESULTS", "ADMIT CARD", "ANSWER KEY", "ADMISSION", "SYLLABUS" ]
+const list = ["LATEST UPDATE", "LATEST RESULTS", "ADMIT CARD", "ANSWER KEY", "ADMISSION", "SYLLABUS"]
 
+let array = [];
 
 export default function Dashboard() {
+    const [datalist, setDataList] = React.useState([])
+
+    React.useEffect(()=>{
+        array = [...jobList, ...resultList]
+        setDataList(array)
+        
+    }, [])
+    console.log('JSON===>', array);
 
     return (
         <Box component="main" sx={{ paddingTop: 5, paddingX: 2 }}>
             <Toolbar />
             <Grid container spacing={1.2} sx={{ height: '100%' }}>
-                {list.map((item) => {
+                {datalist.map((item) => {
                     return (
                         <Grid item md={3}>
-                            <CardList title={item}/>
+                            <CardList title={item.title} />
                         </Grid>
                     )
                 })}

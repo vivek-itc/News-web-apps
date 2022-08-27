@@ -26,7 +26,7 @@ const navItems = ['Home', 'About', 'Contact'];
 const darkTheme = createTheme({
   palette: {
     primary: {
-      main: '#fff',
+      main: '#80add9',
     },
   },
   typography: {
