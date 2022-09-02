@@ -1,6 +1,27 @@
-[{
-  "title": "Latest Results",
-  "uri": "",
-  "description": "",
-  "date": ""
-}]
+[
+  {
+    "title": "Results",
+    "list": [
+      {
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "description": "CSBC Bihar Police Constable Final Result 2022",
+        "date": ""
+      },
+      {
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "description": "RSMSSB Lab Assistant Result 2022",
+        "date": ""
+      },
+      {
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "description": "SSC CHSL 2021 Additional Result",
+        "date": ""
+      },
+      {
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "date": ""
+      }
+    ]
+  }
+]

@@ -13,6 +13,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { createTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
+import { ROUTE } from "./../../constants/index";
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
@@ -22,7 +24,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Result', 'Latest job', 'सरकारी योजना', 'Admit Card', 'ANSWER KEY', "Syllabus", 'About US', 'Services', 'Contact US'];
 const darkTheme = createTheme({
   palette: {
     primary: {
@@ -31,17 +33,31 @@ const darkTheme = createTheme({
   },
   typography: {
     "fontFamily": `"Roboto", "Helvetica", "Arial", sans-serif`,
-    "color": '#000000'
+    "color": '#ffffff'
   }
 });
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const handleClick = (events) => {
+    if (events == "Home") {
+      navigate(ROUTE.HOME.path)
+    } else if (events == "About US") {
+      navigate(ROUTE.ABOUTUS.path)
+    } else if (events == "Services") {
+      navigate(ROUTE.SERVICE.path)
+    } else if (events == "Contact US") {
+      navigate(ROUTE.CONTACT.path)
+    }
+
+  }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} theme={darkTheme}>
@@ -79,19 +95,20 @@ export default function DrawerAppBar(props: Props) {
           <Typography
             variant="subtitle1"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: '#fff' }}
           >
             NEWS DEMO WEB APP
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#000000' }}>
+              <Button key={item} sx={{ color: '#ffffff' }} onClick={() => handleClick(item)}>
                 {item}
               </Button>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
+      
       <Box component="nav">
         <Drawer
           container={container}

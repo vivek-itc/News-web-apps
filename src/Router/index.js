@@ -5,7 +5,9 @@ import {
 } from "react-router-dom";
 import { ROUTE } from "./../constants/index";
 import HomeScreen from "./../components/Dashboard"
-
+import ContactUs from "./../components/ContactUs"
+import AboutUs from "./../components/AboutUs"
+import Services from "./../components/Services"
 
 
 function RouteComponent() {
@@ -14,6 +16,21 @@ function RouteComponent() {
             <Route
                 path={ROUTE.HOME.path}
                 element={<HomeScreen />}
+                exact
+            />
+            <Route
+                path={ROUTE.CONTACT.path}
+                element={<AboutUs />}
+                exact
+            />
+            <Route
+                path={ROUTE.ABOUTUS.path}
+                element={<Services />}
+                exact
+            />
+            <Route
+                path={ROUTE.SERVICE.path}
+                element={<ContactUs />}
                 exact
             />
         </Routes>
