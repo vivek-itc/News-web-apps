@@ -55,8 +55,8 @@ export default function DrawerAppBar(props: Props) {
       navigate(ROUTE.SERVICE.path)
     } else if (events == "Contact US") {
       navigate(ROUTE.CONTACT.path)
-    }else if (events == "Result") {
-      navigate(ROUTE.RESULTS.path)
+    } else if (events == "Result") {
+      navigate(ROUTE.HOME.path + "/" + ROUTE.RESULTS.path)
     }
 
   }
@@ -94,8 +94,8 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-           <Typography variant="subtitle1" noWrap component="div" sx={{ flexGrow: 1, display: { sm: 'block' }, color: '#fff', fontSize: 18 }}>
-           Results duniya
+          <Typography variant="subtitle1" noWrap component="div" sx={{ flexGrow: 1, display: { sm: 'block' }, color: '#fff', fontSize: 18 }}>
+            Results duniya
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
