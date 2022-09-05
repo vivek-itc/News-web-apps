@@ -5,7 +5,7 @@ export const ROUTE = {
     },
     RESULTS: {
         label: 'Results',
-        path: '/results'
+        path: '/News-web-apps/results'
     },
     LATESTJOB: {
         label: 'Latest Job',
