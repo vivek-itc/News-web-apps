@@ -8,6 +8,7 @@ import HomeScreen from "./../components/Dashboard"
 import ContactUs from "./../components/ContactUs"
 import AboutUs from "./../components/AboutUs"
 import Services from "./../components/Services"
+import Results from "./../components/Results"
 
 
 function RouteComponent() {
@@ -16,6 +17,11 @@ function RouteComponent() {
             <Route
                 path={ROUTE.HOME.path}
                 element={<HomeScreen />}
+                exact
+            />
+            <Route
+                path={ROUTE.RESULTS.path}
+                element={<Results />}
                 exact
             />
             <Route

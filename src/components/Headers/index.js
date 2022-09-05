@@ -55,14 +55,16 @@ export default function DrawerAppBar(props: Props) {
       navigate(ROUTE.SERVICE.path)
     } else if (events == "Contact US") {
       navigate(ROUTE.CONTACT.path)
+    }else if (events == "Result") {
+      navigate(ROUTE.RESULTS.path)
     }
 
   }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} theme={darkTheme}>
-      <Typography variant="subtitle1" sx={{ my: 2 }}>
-        NEWS DEMO WEB APP
+      <Typography variant="subtitle1" noWrap sx={{ my: 2, fontSize: 16 }}>
+        Results duniya
       </Typography>
       <Divider />
       <List>
@@ -92,23 +94,19 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="subtitle1"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: '#fff' }}
-          >
-            NEWS DEMO WEB APP
+           <Typography variant="subtitle1" noWrap component="div" sx={{ flexGrow: 1, display: { sm: 'block' }, color: '#fff', fontSize: 18 }}>
+           Results duniya
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#ffffff' }} onClick={() => handleClick(item)}>
+              <Button style={{ textTransform: 'none' }} key={item} sx={{ color: '#ffffff', fontSize: 14 }} onClick={() => handleClick(item)}>
                 {item}
               </Button>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
-      
+
       <Box component="nav">
         <Drawer
           container={container}
