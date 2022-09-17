@@ -7,6 +7,10 @@ export const ROUTE = {
         label: 'Results',
         path: '/News-web-apps/results'
     },
+    DETAILS: {
+        label: 'Details',
+        path: '/News-web-apps/details'
+    },
     LATESTJOB: {
         label: 'Latest Job',
         path: '/latest-job'

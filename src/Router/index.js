@@ -9,7 +9,7 @@ import ContactUs from "./../components/ContactUs"
 import AboutUs from "./../components/AboutUs"
 import Services from "./../components/Services"
 import Results from "./../components/Results"
-
+import Details from "./../components/Details"
 
 function RouteComponent() {
     return (
@@ -22,6 +22,11 @@ function RouteComponent() {
             <Route
                 path={ROUTE.RESULTS.path}
                 element={<Results />}
+                exact
+            />
+            <Route
+                path={ROUTE.DETAILS.path}
+                element={<Details />}
                 exact
             />
             <Route

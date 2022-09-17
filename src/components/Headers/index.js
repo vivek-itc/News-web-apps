@@ -15,6 +15,8 @@ import Button from '@mui/material/Button';
 import { createTheme } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import { ROUTE } from "./../../constants/index";
+// import Logo from './../../Images/logo.'
+
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
@@ -55,7 +57,7 @@ export default function DrawerAppBar(props: Props) {
       navigate(ROUTE.SERVICE.path)
     } else if (events == "Contact US") {
       navigate(ROUTE.CONTACT.path)
-    }else if (events == "Result") {
+    } else if (events == "Result") {
       navigate(ROUTE.RESULTS.path)
     }
 
@@ -94,8 +96,9 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-           <Typography variant="subtitle1" noWrap component="div" sx={{ flexGrow: 1, display: { sm: 'block' }, color: '#fff', fontSize: 18 }}>
-           Results duniya
+          <img src={require('./../../Images/logo.png')} style={{ width: 50, height: 50 }} />
+          <Typography variant="subtitle1" noWrap component="div" sx={{ flexGrow: 1, display: { sm: 'block' }, color: '#fff', fontSize: 18, paddingLeft: 1 }}>
+            Results Duniya
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (

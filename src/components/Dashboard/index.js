@@ -22,6 +22,7 @@ export default function Dashboard() {
         setDataList(array)
     }, [])
 
+
     return (
         <Box component="main" sx={{ paddingTop: 5, paddingX: 2 }}>
             <Toolbar />

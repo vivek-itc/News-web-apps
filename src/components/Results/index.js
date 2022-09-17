@@ -1,26 +1,41 @@
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import CardList from "./../CardList/index";
-import {
-    Grid
-} from '@mui/material'
-import jobList from "./../data/LatestJob.json"
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import resultList from "./../data/LatestResult.json"
-import AdmitCard from "./../data/AdmitCard.json"
-import ANSWERKEY from "./../data/ANSWERKEY.json"
-import SarkariYojna from "./../data/SarkariYojna.json"
-import Syllabus from "./../data/Syllabus.json"
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
-export default function Dashboard() {
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  // textAlign: 'center',
+  color: theme.palette.text.secondary,
+  justifySelf: 'center'
+}));
 
-    return (
-        <Box component="main" sx={{ paddingTop: 5, paddingX: 2 }}>
-            <Toolbar />
-            <Grid container spacing={1.2} sx={{ height: '100%' }}>
-                
+export default function BasicGrid() {
+  return (
+    <Box sx={{ flexGrow: 1, paddingTop: 15, paddingX: 2 }}>
+      <Typography style={{ textAlign: 'center', fontSize: 24, paddingBottom: 30 }}>Welcome to result</Typography>
+      <Grid container spacing={2}>
+        {resultList[0].list.map((item) => {
+          return (
+            <Grid item xs={6}>
+              <Item>
+                <FiberManualRecordIcon sx={{ fontSize: 12, color: '#000000', paddingTop: 1, paddingRight: 1 }} />
+                <Typography variant="body3" color="#000" sx={{ fontSize: 18, fontWeight: 400, fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif` }}>
+                  {item.description}
+                </Typography>
+              </Item>
             </Grid>
-            <Toolbar />
-        </Box>
-    )
+          )
+        })
+        }
+
+      </Grid>
+    </Box>
+  );
 }
