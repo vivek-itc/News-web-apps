@@ -3,24 +3,28 @@
     "title": "Latest Job",
     "list": [
       {
+        "flag": "job",
         "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
         "description": "FCI Non Executives Various Post Online Form 2022",
-        "date": ""
+        "date": "18-09-2022"
       },
       {
+        "flag": "job",
         "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
         "description": "Sail Bokaro Attendant Cum Technician Online Form 2022",
-        "date": ""
+        "date": "18-09-2022"
       },
       {
+        "flag": "job",
         "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
         "description": "UPRVUNL Computer Assistant Online Form 2022 BI Relationship Offic",
-        "date": ""
+        "date": "18-09-2022"
       },
       {
+        "flag": "job",
         "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
         "description": "NPS Trust Grade A B Various Post Online Form 2022",
-        "date": ""
+        "date": "18-09-2022"
       }
     ]
   }

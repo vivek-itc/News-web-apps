@@ -18,7 +18,7 @@ export default function Dashboard() {
     const [datalist, setDataList] = React.useState([])
 
     React.useEffect(() => {
-        array = [...resultList, ...jobList, ...SarkariYojna, ...AdmitCard, ...ANSWERKEY, ...Syllabus]
+        array = [...resultList, ...AdmitCard, ...jobList, ...SarkariYojna, ...ANSWERKEY, ...Syllabus]
         setDataList(array)
     }, [])
 
@@ -26,7 +26,7 @@ export default function Dashboard() {
     return (
         <Box component="main" sx={{ paddingTop: 5, paddingX: 2 }}>
             <Toolbar />
-            <Grid container spacing={1.2} sx={{ height: '100%' }}>
+            <Grid container spacing={1.2} sx={{ height: '100%', borderColor: 'red' }}>
                 {datalist.map((item) => {
                     return (
                         <Grid item md={3} >

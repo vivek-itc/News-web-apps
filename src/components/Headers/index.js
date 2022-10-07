@@ -59,7 +59,14 @@ export default function DrawerAppBar(props: Props) {
       navigate(ROUTE.CONTACT.path)
     } else if (events == "Result") {
       navigate(ROUTE.RESULTS.path)
+    }else if (events == "Latest job") {
+      navigate(ROUTE.JOBS.path)
+    }else if (events == "सरकारी योजना") {
+      navigate(ROUTE.SARKARIYOJANA.path)
+    }else if (events == "Admit Card") {
+      navigate(ROUTE.ADMITCARD.path)
     }
+
 
   }
 

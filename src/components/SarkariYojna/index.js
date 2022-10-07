@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import resultList from "./../data/LatestResult.json"
+import jobList from "./../data/LatestJob.json"
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import { grey } from '@mui/material/colors';
@@ -56,12 +56,12 @@ export default function BasicGrid() {
 
   return (
     <Box sx={{ flexGrow: 1, paddingTop: 15, paddingX: 2 }}>
-      <Typography style={{ textAlign: 'center', fontSize: 24, paddingBottom: 30 }}>Welcome to result</Typography>
+      <Typography style={{ textAlign: 'center', fontSize: 24, paddingBottom: 30 }}>Welcome to Sarkai Yojana</Typography>
       <Grid container spacing={2}>
-        {resultList[0].list.map((item) => {
+        {jobList[0].list.map((item) => {
           return (
             <Grid item xs={6}>
-              <CustomButton onClick={() => navigate(ROUTE.DETAILS.path, { state: { item } })}>
+              <CustomButton onClick={() => navigate(ROUTE.SARKARIYOJANADETAILS.path, { state: { item } })}>
                 <Item>
                   <Box component="span" sx={{ display: 'flex' }}>
                     <FiberManualRecordIcon sx={{ fontSize: 12, color: '#000000', paddingTop: 1, paddingRight: 1 }} />

@@ -1,26 +1,51 @@
 [
   {
-    "title": "Admit Card",
+    "title": "Admit card",
     "list": [
       {
-        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
-        "description": "FCI Non Executives Various Post Online Form 2022",
-        "date": ""
+        "flag": "admit",
+        "uri": "https://secondary.biharboardonline.com/",
+        "image_uri": "",
+        "description": "BSEB 10th class exam from 2022",
+        "subtitle": "",
+        "status": "COMING SOON",
+        "date": "18-09-2022"
       },
       {
+        "flag": "admit",
         "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
-        "description": "Sail Bokaro Attendant Cum Technician Online Form 2022",
-        "date": ""
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
       },
       {
+        "flag": "admit",
         "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
-        "description": "UPRVUNL Computer Assistant Online Form 2022 BI Relationship Offic",
-        "date": ""
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
       },
       {
+        "flag": "admit",
         "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
-        "description": "NPS Trust Grade A B Various Post Online Form 2022",
-        "date": ""
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "admit",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
       }
     ]
   }

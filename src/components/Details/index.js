@@ -8,9 +8,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function FixedContainer({ route }) {
   const { state } = useLocation();
-
-
-  console.log(state)
   return (
     <React.Fragment>
       <CssBaseline />
@@ -27,10 +24,10 @@ export default function FixedContainer({ route }) {
                 </Box>
               </Box>
             </Box>
-
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80%' }}>
-              <Button onClick={()=>window.location.assign(state.item.uri)}>
-                <Typography sx={{ fontSize: 14, fontWeight: "600", color: 'red' }}>Click here</Typography>
+              <Typography sx={{ fontSize: 14, fontWeight: "600", color: 'green' }}>{state.item.status}</Typography>
+              <Button onClick={() => window.location.assign(state.item.uri)}>
+                <Typography sx={{ fontSize: 18, fontWeight: "600", color: 'red' }}>Click here</Typography>
               </Button>
             </Box>
           </Box>

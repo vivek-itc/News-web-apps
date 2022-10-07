@@ -7,6 +7,14 @@ export const ROUTE = {
         label: 'Results',
         path: '/News-web-apps/results'
     },
+    JOBS: {
+        label: 'Latest Jobs',
+        path: '/News-web-apps/job'
+    },
+    JOBSDETAILS: {
+        label: 'Job Details',
+        path: '/News-web-apps/jobsdetails'
+    },
     DETAILS: {
         label: 'Details',
         path: '/News-web-apps/details'
@@ -19,9 +27,17 @@ export const ROUTE = {
         label: 'Sarkari yojana',
         path: '/sarkari-yojana'
     },
+    SARKARIYOJANADETAILS: {
+        label: 'Sarkari yojana details',
+        path: '/sarkari-yojana-details'
+    },    
     ADMITCARD: {
         label: 'Admit card',
         path: '/admit-card'
+    },
+    CARDDETAILS: {
+        label: 'Admit card',
+        path: '/admit-card/details'
     },
     ANSKEY: {
         label: 'Ans key',

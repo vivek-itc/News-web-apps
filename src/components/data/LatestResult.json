@@ -3,24 +3,94 @@
     "title": "Results",
     "list": [
       {
+        "flag": "result",
         "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
-        "description": "CSBC Bihar Police Constable Final Result 2022",
-        "date": ""
-      },
-      {
-        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
-        "description": "RSMSSB Lab Assistant Result 2022",
-        "date": ""
-      },
-      {
-        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
-        "description": "SSC CHSL 2021 Additional Result",
-        "date": ""
-      },
-      {
-        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
         "description": "RSMSSB Computer Instructor Result 2022",
-        "date": ""
+        "subtitle": "",
+        "status": "COMING SOON",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
+      },
+      {
+        "flag": "result",
+        "uri": "https://ntaresults.nic.in/resultservices/JEEMAINauth22s2p1",
+        "image_uri": "",
+        "description": "RSMSSB Computer Instructor Result 2022",
+        "subtitle": "",
+        "status": "NOW AVAILABLE",
+        "date": "18-09-2022"
       }
     ]
   }

@@ -15,6 +15,8 @@ import Paper from '@mui/material/Paper';
 import { ROUTE } from "./../../constants/index";
 import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import { grey } from '@mui/material/colors';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -33,15 +35,9 @@ const Item = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(1),
     // textAlign: 'center',
     color: theme.palette.text.secondary,
-    display: 'flex',
-    justifyItems: 'center'
+    // display: 'flex',
+    // justifyItems: 'center'
 }));
-
-const blue = {
-    500: '#007FFF',
-    600: '#0072E5',
-    700: '#0059B2',
-};
 
 const CustomButton = styled(ButtonUnstyled)`
     font-family: IBM Plex Sans, sans-serif;
@@ -79,33 +75,56 @@ export default function RecipeReviewCard({ data }) {
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
+        navigate(ROUTE.RESULTS.path)
     };
 
+    const handleClick = (item) => {
+        if (item.flag == "result") {
+            navigate(ROUTE.DETAILS.path, { state: { item } })
+        } else if(item.flag == "job"){
+            navigate(ROUTE.JOBSDETAILS.path, { state: { item } })
+        }else if(item.flag == "sarkari"){
+            navigate(ROUTE.SARKARIYOJANADETAILS.path, { state: { item } })
+        }
+    }
+
     return (
-        <Card sx={{ maxWidth: 450, minWidth: 200, height: '100%' }} >
+        <Card sx={{ maxWidth: 450, minWidth: 200, height: '100%', border: 1, borderColor: '#80add9' }} >
             <CardHeader
                 sx={{ backgroundColor: '#80add9', color: '#fff', fontSize: 10 }}
                 title={data.title}
             />
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    {data.list.map((item) => {
-                        return (
-                            <Box style={{ paddingBottom: 15 }} >
-                                <Grid container>
-                                    <Grid item xs={12} >
-                                        <CustomButton onClick={() => navigate(ROUTE.DETAILS.path, {state: { item }})}>
-                                            <Item>
-                                                <FiberManualRecordIcon sx={{ fontSize: 12, color: '#000000', paddingTop: 1, paddingRight: 1 }} />
-                                                <Typography variant="body3" color="#000" sx={{ fontSize: 18, fontWeight: 400, fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif` }}>
-                                                    {item.description}
-                                                </Typography>
-                                            </Item>
-                                        </CustomButton>
+                    {data.list.map((item, index) => {
+                        if (index < 5) {
+                            return (
+                                <Box style={{ paddingBottom: 15 }} >
+                                    <Grid container>
+                                        <Grid item xs={12} >
+                                            <CustomButton onClick={() => handleClick(item)}>
+                                                <Item>
+                                                    <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+                                                        <FiberManualRecordIcon sx={{ fontSize: 12, color: '#000000', paddingTop: 1, paddingRight: 1 }} />
+                                                        <Typography variant="body3" color="#000" sx={{ fontSize: 18, fontWeight: 400, fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif` }}>
+                                                            {item.description}
+                                                        </Typography>
+                                                    </Box>
+                                                    <Box component="span" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                        <Typography sx={{ color: 'red', fontSize: 12, paddingTop: 1, fontWeight: '600' }}>{item.status}</Typography>
+                                                        <Box component="span" sx={{ display: 'flex', alignItems: 'center' }}>
+                                                            <AccessTimeIcon fontSize='small' />
+                                                            <Typography color="grey" sx={{ fontSize: 12, textAlignLast: 'center' }}>{item.date}</Typography>
+                                                        </Box>
+                                                    </Box>
+                                                </Item>
+
+                                            </CustomButton>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
-                            </Box>
-                        )
+                                </Box>
+                            )
+                        }
                     })
                     }
                 </Typography>
@@ -120,35 +139,6 @@ export default function RecipeReviewCard({ data }) {
                     <ExpandMoreIcon />
                 </ExpandMore>
             </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
-                    <Typography variant="body2" color="text.secondary" >
-                        <ul style={{ marginLeft: -20 }}>
-                            <li style={{ paddingBottom: 15 }}> This impressive paella is a perfect party dish and a fun meal to cook
-                                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                if you like.</li>
-                            <li style={{ paddingBottom: 15 }}> This impressive paella is a perfect party dish and a fun meal to cook
-                                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                if you like.</li>
-                            <li style={{ paddingBottom: 15 }}> This impressive paella is a perfect party dish and a fun meal to cook
-                                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                if you like.</li>
-                            <li style={{ paddingBottom: 15 }}> This impressive paella is a perfect party dish and a fun meal to cook
-                                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                if you like.</li>
-                            <li style={{ paddingBottom: 15 }}> This impressive paella is a perfect party dish and a fun meal to cook
-                                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                if you like.</li>
-                            <li style={{ paddingBottom: 15 }}> This impressive paella is a perfect party dish and a fun meal to cook
-                                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                if you like.</li>
-                            <li style={{ paddingBottom: 15 }}> This impressive paella is a perfect party dish and a fun meal to cook
-                                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                if you like.</li>
-                        </ul>
-                    </Typography>
-                </CardContent>
-            </Collapse>
         </Card >
     );
 }
